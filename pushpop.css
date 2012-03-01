@@ -264,9 +264,8 @@ body {
   transform: translate3d(100%, 0, 0);
 }
 
-/* Transition: slide-vertical (2D), flip-vertical (2D) */
-.pp-view.slide-vertical,
-.pp-view.flip-vertical {
+/* Transition: cover-vertical (3D) */
+.csstransforms3d .pp-view.cover-vertical {
   -webkit-box-shadow: 0 -2px 16px 6px rgba(0, 0, 0, 0.6); /* NOTE: Possible performance implications on some devices/browsers. */
   -moz-box-shadow: 0 -2px 16px 6px rgba(0, 0, 0, 0.6);
   box-shadow: 0 -2px 16px 6px rgba(0, 0, 0, 0.6);
@@ -276,88 +275,69 @@ body {
   -o-transition: -o-transform 0.5s ease;
   transition: transform 0.5s ease;
 }
-
-.pp-view.push.slide-vertical,
-.pp-view.push.flip-vertical {
+.csstransforms3d .pp-view.push.cover-vertical {
   z-index: 1;
-  -webkit-transform: translate(0, -100%);
-  -moz-transform: translate(0, -100%);
-  -ms-transform: translate(0, -100%);
-  -o-transform: translate(0, -100%);
-  transform: translate(0, -100%);
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
-
-.pp-view.push.slide-vertical.transition,
-.pp-view.push.flip-vertical.transition {
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
+.csstransforms3d .pp-view.push.cover-vertical.transition {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
-.pp-view.push.slide-vertical.active,
-.pp-view.push.flip-vertical.active {
+.csstransforms3d .pp-view.push.cover-vertical.active {
   z-index: 0;
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
-.pp-view.push.slide-vertical.active.transition,
-.pp-view.push.flip-vertical.active.transition {
-  -webkit-transform: translate(0, 1%);
-  -moz-transform: translate(0, 1%);
-  -ms-transform: translate(0, 1%);
-  -o-transform: translate(0, 1%);
-  transform: translate(0, 1%);
+.csstransforms3d .pp-view.push.cover-vertical.active.transition {
+  -webkit-transform: translate3d(0, 1%, 0);
+  -moz-transform: translate3d(0, 1%, 0);
+  -ms-transform: translate3d(0, 1%, 0);
+  -o-transform: translate3d(0, 1%, 0);
+  transform: translate3d(0, 1%, 0);
 }
-
-.pp-view.pop.slide-vertical,
-.pp-view.pop.flip-vertical {
+.csstransforms3d .pp-view.pop.cover-vertical {
   z-index: 0;
-  -webkit-transform: translate(0, 1%);
-  -moz-transform: translate(0, 1%);
-  -ms-transform: translate(0, 1%);
-  -o-transform: translate(0, 1%);
-  transform: translate(0, 1%);
+  -webkit-transform: translate3d(0, 1%, 0);
+  -moz-transform: translate3d(0, 1%, 0);
+  -ms-transform: translate3d(0, 1%, 0);
+  -o-transform: translate3d(0, 1%, 0);
+  transform: translate3d(0, 1%, 0);
 }
-
-.pp-view.pop.slide-vertical.transition,
-.pp-view.pop.flip-vertical.transition {
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
+.csstransforms3d .pp-view.pop.cover-vertical.transition {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
-.pp-view.pop.slide-vertical.active,
-.pp-view.pop.flip-vertical.active {
+.csstransforms3d .pp-view.pop.cover-vertical.active {
   z-index: 1;
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-
-.pp-view.pop.slide-vertical.active.transition,
-.pp-view.pop.flip-vertical.active.transition {
-  -webkit-transform: translate(0, -100%);
-  -moz-transform: translate(0, -100%);
-  -ms-transform: translate(0, -100%);
-  -o-transform: translate(0, -100%);
-  transform: translate(0, -100%);
+.csstransforms3d .pp-view.pop.cover-vertical.active.transition {
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
 /* Transition: slide-vertical (3D) */
 .csstransforms3d .pp-view.slide-vertical {
-  -webkit-box-shadow: 0 -2px 16px 6px rgba(0, 0, 0, 0.6); /* NOTE: Possible performance implications on some devices/browsers. */
-  -moz-box-shadow: 0 -2px 16px 6px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 -2px 16px 6px rgba(0, 0, 0, 0.6);
   -webkit-transition: -webkit-transform 0.5s ease;
   -moz-transition: -moz-transform 0.5s ease;
   -ms-transition: -ms-transform 0.5s ease;
@@ -365,12 +345,11 @@ body {
   transition: transform 0.5s ease;
 }
 .csstransforms3d .pp-view.push.slide-vertical {
-  z-index: 1;
-  -webkit-transform: translate3d(0, -100%, 0);
-  -moz-transform: translate3d(0, -100%, 0);
-  -ms-transform: translate3d(0, -100%, 0);
-  -o-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  -moz-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  -o-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
 }
 .csstransforms3d .pp-view.push.slide-vertical.transition {
   -webkit-transform: translate3d(0, 0, 0);
@@ -380,7 +359,6 @@ body {
   transform: translate3d(0, 0, 0);
 }
 .csstransforms3d .pp-view.push.slide-vertical.active {
-  z-index: 0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -388,19 +366,18 @@ body {
   transform: translate3d(0, 0, 0);
 }
 .csstransforms3d .pp-view.push.slide-vertical.active.transition {
-  -webkit-transform: translate3d(0, 1%, 0);
-  -moz-transform: translate3d(0, 1%, 0);
-  -ms-transform: translate3d(0, 1%, 0);
-  -o-transform: translate3d(0, 1%, 0);
-  transform: translate3d(0, 1%, 0);
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 .csstransforms3d .pp-view.pop.slide-vertical {
-  z-index: 0;
-  -webkit-transform: translate3d(0, 1%, 0);
-  -moz-transform: translate3d(0, 1%, 0);
-  -ms-transform: translate3d(0, 1%, 0);
-  -o-transform: translate3d(0, 1%, 0);
-  transform: translate3d(0, 1%, 0);
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 .csstransforms3d .pp-view.pop.slide-vertical.transition {
   -webkit-transform: translate3d(0, 0, 0);
@@ -410,7 +387,6 @@ body {
   transform: translate3d(0, 0, 0);
 }
 .csstransforms3d .pp-view.pop.slide-vertical.active {
-  z-index: 1;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -418,11 +394,11 @@ body {
   transform: translate3d(0, 0, 0);
 }
 .csstransforms3d .pp-view.pop.slide-vertical.active.transition {
-  -webkit-transform: translate3d(0, -100%, 0);
-  -moz-transform: translate3d(0, -100%, 0);
-  -ms-transform: translate3d(0, -100%, 0);
-  -o-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  -moz-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  -o-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
 }
 
 /* Transition: flip-horizontal (3D) */
