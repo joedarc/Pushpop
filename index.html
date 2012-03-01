@@ -11,6 +11,24 @@
 	<script type="text/javascript" src="jquery-1.7.1.js"></script>
 	<script type="text/javascript" src="externals/scrollkit/scrollkit.js"></script>
 	<script type="text/javascript" src="pushpop.js"></script>
+	<script type="text/javascript">
+	  $(function() {
+	    var $body = $(document.body);
+	    
+	    // Pushpop View Events
+      var pushpopEventHandler = function(evt) {
+        console.log(evt.type + ': ' + evt.view);
+      };
+      $body.bind(Pushpop.EventType.WillPushView, pushpopEventHandler);
+      $body.bind(Pushpop.EventType.DidPushView, pushpopEventHandler);
+      $body.bind(Pushpop.EventType.WillPopView, pushpopEventHandler);
+      $body.bind(Pushpop.EventType.DidPopView, pushpopEventHandler);
+      $body.bind(Pushpop.EventType.WillDismissView, pushpopEventHandler);
+      $body.bind(Pushpop.EventType.DidDismissView, pushpopEventHandler);
+      $body.bind(Pushpop.EventType.WillPresentView, pushpopEventHandler);
+      $body.bind(Pushpop.EventType.DidPresentView, pushpopEventHandler);
+	  });
+	</script>
 </head>
 <body>
   <div class="navbar navbar-fixed-top">
@@ -34,6 +52,10 @@
       <a class="btn push" data-transition="card-swap" href="#detail-view-other">Card Swap</a>
       <a class="btn push" data-transition="zoom" href="#detail-view-other">Zoom</a>
       <a class="btn push" data-transition="cross-fade" href="#detail-view-other">Cross Fade</a>
+      <a class="btn push" data-transition="door-left" href="#detail-view-other">Door Left</a>
+      <a class="btn push" data-transition="door-right" href="#detail-view-other">Door Right</a>
+      <a class="btn push" data-transition="door-top" href="#detail-view-other">Door Top</a>
+      <a class="btn push" data-transition="door-bottom" href="#detail-view-other">Door Bottom</a>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
